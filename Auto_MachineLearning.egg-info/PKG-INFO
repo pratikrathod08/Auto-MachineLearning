@@ -1,0 +1,39 @@
+Metadata-Version: 2.4
+Name: Auto-MachineLearning
+Version: 0.0.1
+Summary: An AutoML framework with classification, regression, etc.
+Author: PratikRathod
+Author-email: pratikr1521998@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.12
+Description-Content-Type: text/markdown
+Requires-Dist: scikit-learn
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+Requires-Dist: setuptools
+Requires-Dist: wheel
+Requires-Dist: twine
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Auto-MachineLearning 
+
+## Test version
+View at:
+https://test.pypi.org/project/Auto-MachineLearning/0.0.1/
+
+
+## Hou to use 
+from Auto_MachineLearning.ml.preprocessor.datareader import ReadData
+
+reader = ReadData()
+df = reader.read_csv("data.csv")

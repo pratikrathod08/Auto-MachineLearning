@@ -1,0 +1,16 @@
+README.md
+setup.py
+Auto_MachineLearning.egg-info/PKG-INFO
+Auto_MachineLearning.egg-info/SOURCES.txt
+Auto_MachineLearning.egg-info/dependency_links.txt
+Auto_MachineLearning.egg-info/requires.txt
+Auto_MachineLearning.egg-info/top_level.txt
+auto_machinelearning/__init__.py
+auto_machinelearning/dl/__init__.py
+auto_machinelearning/ml/__init__.py
+auto_machinelearning/ml/classiifcation/__init__.py
+auto_machinelearning/ml/clustering/__init__.py
+auto_machinelearning/ml/preprocessor/__init__.py
+auto_machinelearning/ml/preprocessor/datadescriber.py
+auto_machinelearning/ml/preprocessor/datareader.py
+auto_machinelearning/ml/regression/__init__.py

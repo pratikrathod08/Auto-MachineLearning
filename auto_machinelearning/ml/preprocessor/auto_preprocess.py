@@ -9,19 +9,20 @@ class AutoPreprocessor:
         self.encoder = LabelEncoder()
         self.scaler = StandardScaler()
 
-    def column_removal(self, df: pd.DataFrame) -> pd.DataFrame: 
-        remove_col_list = []
-        df_copy = df.copy()
-        nan_val = df.isna().sum()
 
-        for key, value in dict(nan_val).items():
-            percentage = value/df_copy.shape[0] * 100
-            if percentage > 30: 
-                remove_col_list.append(key)
+    # def column_removal(self, df: pd.DataFrame) -> pd.DataFrame: 
+    #     remove_col_list = []
+    #     df_copy = df.copy()
+    #     nan_val = df.isna().sum()
 
-        updated_df = df_copy.drop(columns = remove_col_list)
+    #     for key, value in dict(nan_val).items():
+    #         percentage = value/df_copy.shape[0] * 100
+    #         if percentage > 30: 
+    #             remove_col_list.append(key)
 
-        return updated_df
+    #     updated_df = df_copy.drop(columns = remove_col_list)
+
+    #     return updated_df
     
     def convert_cat_to_num(self, df: pd.DataFrame) -> pd.DataFrame:
         df_copy = df.copy() 
@@ -41,10 +42,19 @@ class AutoPreprocessor:
 
         return df_copy
     
-    def run_preprocessing(self) -> pd.DataFrame: 
-        updated_df = self.column_removal(self.df)
-        encoded_df = self.convert_cat_to_num(updated_df)
+    def transform_new_data(self, new_df: pd.DataFrame) -> pd.DataFrame:
+        df_copy = new_df.copy()
+
+        # Use already-fitted encoder and scaler
+        df_copy = self.convert_cat_to_num(df_copy)
+        df_copy = self.scale_dataframe(df_copy)
+
+        return df_copy
+    
+    def run_preprocessing(self): 
+        # updated_df = self.column_removal(self.df)
+        encoded_df = self.convert_cat_to_num(self.df)
         scaled_df = self.scale_dataframe(encoded_df)
 
-        return scaled_df
+        return scaled_df, self.encoder, self.scaler
 

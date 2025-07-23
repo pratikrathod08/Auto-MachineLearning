@@ -11,6 +11,16 @@ auto_machinelearning/ml/__init__.py
 auto_machinelearning/ml/classiifcation/__init__.py
 auto_machinelearning/ml/clustering/__init__.py
 auto_machinelearning/ml/preprocessor/__init__.py
+auto_machinelearning/ml/preprocessor/auto_preprocess.py
 auto_machinelearning/ml/preprocessor/datadescriber.py
 auto_machinelearning/ml/preprocessor/datareader.py
+auto_machinelearning/ml/preprocessor/preprocess.py
+auto_machinelearning/ml/preprocessor/processor.py
 auto_machinelearning/ml/regression/__init__.py
+auto_machinelearning/ml/regression/utils.py
+auto_machinelearning/ml/regression/components/__init__.py
+auto_machinelearning/ml/regression/components/data_ingestion.py
+auto_machinelearning/ml/regression/components/data_transformation.py
+auto_machinelearning/ml/regression/components/model_trainer.py
+auto_machinelearning/ml/regression/entity/__init__.py
+auto_machinelearning/ml/regression/entity/artifacts_entity.py

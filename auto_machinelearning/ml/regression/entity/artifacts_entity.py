@@ -30,6 +30,9 @@ class ClassificationMetricArtifact:
 @dataclass 
 class ModelTrainerArtifact: 
     trained_model: object 
+    best_model_name: str
+    best_model_parameters: dict
+    models_report: dict
     train_metric_artifact: ClassificationMetricArtifact | RegressionMetrixArtifacts
     test_metric_artifact: ClassificationMetricArtifact | RegressionMetrixArtifacts
 

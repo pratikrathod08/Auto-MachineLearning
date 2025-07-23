@@ -3,6 +3,8 @@ numpy
 pandas
 matplotlib
 seaborn
+pyyaml
 setuptools
 wheel
 twine
+readme_renderer

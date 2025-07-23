@@ -18,11 +18,6 @@ class DataTransformation:
         X_test = self.test_df.drop(columns=[self.target_column])
         y_test = self.test_df[[self.target_column]]
 
-        # # Apply preprocessing on features
-        # preprocessor = AutoPreprocessor(X_train, target_column=None)  # no target needed for X
-        # X_train_processed = preprocessor.run_preprocessing()
-        # X_test_processed = preprocessor.scale_dataframe(preprocessor.convert_cat_to_num(X_test))
-
         # Return all in artifacts
         return DataTransformationArtifacts(
             X_train=X_train,

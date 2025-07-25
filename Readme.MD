@@ -3,7 +3,7 @@
 
 ## Test version
 View at:
-https://test.pypi.org/project/Auto-MachineLearning/0.0.3/
+https://test.pypi.org/project/Auto-MachineLearning/0.0.6/
 
 
 ## How to use 
@@ -67,7 +67,7 @@ preprocessor = joblib.load("output/preprocessor.pkl")
 csv_path = "data/Bengaluru_House_Data.csv"
 df = pd.read_csv(csv_path)
 preprocessed_df = preprocessor.transform(df)
-preprocessed_df = pd.DataFrame(final_df)
+preprocessed_df = pd.DataFrame(preprocessed_df)
 
 ## Note : add headers and output column in processed df as it is returning processed raw data. 
 ```

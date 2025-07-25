@@ -71,7 +71,11 @@ class ModelTrainer:
             "Gradiant Boosting": GradientBoostingRegressor(verbose=1), 
         }
 
-        params = load_model_params("model_params.yaml")
+        # params = load_model_params("model_params.yaml")
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        model_params_path = os.path.join(base_dir, "../model_params.yaml")
+
+        params = load_model_params(model_params_path)
 
         model_report, tuned_models  = self.evaluate_models(X_train=self.X_train, y_train=self.y_train, X_test=self.X_test, y_test=self.y_test, models=models, params=params)
 

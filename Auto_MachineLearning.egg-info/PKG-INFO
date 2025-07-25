@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: Auto-MachineLearning
-Version: 0.0.6
+Version: 0.0.7
 Summary: An AutoML framework with classification, regression, etc.
 Author: PratikRathod
 Author-email: pratikr1521998@gmail.com
@@ -32,7 +32,7 @@ Dynamic: summary
 
 ## Test version
 View at:
-https://test.pypi.org/project/Auto-MachineLearning/0.0.6/
+https://test.pypi.org/project/Auto-MachineLearning/0.0.7/
 
 
 ## How to use 
@@ -41,7 +41,7 @@ https://test.pypi.org/project/Auto-MachineLearning/0.0.6/
 ### Install test package
 
 ```bash
-pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning
+pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.0.7
 ```
 
 ### Read Data

@@ -72,10 +72,18 @@ class ModelTrainer:
         }
 
         # params = load_model_params("model_params.yaml")
-        base_dir = os.path.dirname(os.path.abspath(__file__))
-        model_params_path = os.path.join(base_dir, "../model_params.yaml")
+        # base_dir = os.path.dirname(os.path.abspath(__file__))
+        # model_params_path = "../model_params.yaml"
 
-        params = load_model_params(model_params_path)
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+
+        # Step 2: Go one level up to reach .../regression/
+        regression_dir = os.path.abspath(os.path.join(current_dir, ".."))
+
+        # Step 3: Build full path to model_params.yaml
+        params_path = os.path.join(regression_dir, "model_params.yaml")
+
+        params = load_model_params(params_path)
 
         model_report, tuned_models  = self.evaluate_models(X_train=self.X_train, y_train=self.y_train, X_test=self.X_test, y_test=self.y_test, models=models, params=params)
 

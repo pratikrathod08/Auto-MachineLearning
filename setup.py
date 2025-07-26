@@ -16,7 +16,7 @@ def get_requirements(file_path:str)->List[str]:
 
 setup(
     name='Auto-MachineLearning',
-    version='0.0.9',
+    version='0.1.0',
     author='PratikRathod',
     author_email='pratikr1521998@gmail.com',
     description="An AutoML framework with classification, regression, etc.",

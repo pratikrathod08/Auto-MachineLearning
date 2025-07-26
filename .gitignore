@@ -8,4 +8,6 @@ __pycache__/
 venv 
 research
 Description.md
+build
+dist
 

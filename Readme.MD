@@ -109,7 +109,7 @@ print(result)
 import joblib 
 import numpy as np
 import pandas as pd 
-from sklearn.metrics import r2_score
+from sklearn.metrics import r2_score, mean_squared_error
 
 ## Store trained model to local system
 model = result.get("model")
@@ -137,7 +137,7 @@ print("rmse : ", np.sqrt(mean_squared_error(y_pred, y)))
 ```bash 
 from auto_machinelearning.ml.classification import AutoClassification
 
-classification = AutoRegression(path="data.csv", filetype="csv", target_column="target_column")
+classification = AutoClassification(path="data.csv", filetype="csv", target_column="target_column")
 result = classification.train_model()
 print(result)
 

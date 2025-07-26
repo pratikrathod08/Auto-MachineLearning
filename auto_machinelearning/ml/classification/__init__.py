@@ -1,11 +1,11 @@
 import os, sys 
 
-from auto_machinelearning.ml.regression.components.data_ingestion import DataIngestion
-from auto_machinelearning.ml.regression.components.data_transformation import DataTransformation
-from auto_machinelearning.ml.regression.components.model_trainer import ModelTrainer
+from auto_machinelearning.ml.classification.components.data_ingestion import DataIngestion
+from auto_machinelearning.ml.classification.components.data_transformation import DataTransformation
+from auto_machinelearning.ml.classification.components.model_trainer import ModelTrainer
 
 
-class AutoRegression: 
+class AutoClassification: 
     def __init__(self, path: str, filetype: str, target_column: str, **params):
         self.path = path 
         self.filetype = filetype 
@@ -26,8 +26,9 @@ class AutoRegression:
             "best_model_name": self.model_trainer_artifacts.best_model_name, 
             "model": self.model_trainer_artifacts.trained_model, 
             "model_params": self.model_trainer_artifacts.best_model_parameters, 
-            "r2_score": self.model_trainer_artifacts.train_metric_artifact.r2_score, 
-            "rmse": self.model_trainer_artifacts.train_metric_artifact.rmse, 
-            "mse": self.model_trainer_artifacts.train_metric_artifact.mse 
+            "accuracy": self.model_trainer_artifacts.train_metric_artifact.accuracy, 
+            "precision": self.model_trainer_artifacts.train_metric_artifact.precision_score, 
+            "recall": self.model_trainer_artifacts.train_metric_artifact.recall_score, 
+            "f1_score": self.model_trainer_artifacts.train_metric_artifact.f1_score
             # "models_report":self.model_trainer_artifacts.models_report 
         }

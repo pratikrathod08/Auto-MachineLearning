@@ -3,7 +3,7 @@
 
 ## Test version
 View at:
-https://test.pypi.org/project/Auto-MachineLearning/0.0.9/
+https://test.pypi.org/project/Auto-MachineLearning/0.1.0/
 
 
 ## How to use 
@@ -12,7 +12,7 @@ https://test.pypi.org/project/Auto-MachineLearning/0.0.9/
 ### Install test package
 
 ```bash
-pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.0.9
+pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.1.0
 ```
 
 ### Read Data
@@ -74,6 +74,8 @@ preprocessed_df = pd.DataFrame(preprocessed_df)
 
 ### Train Model
 
+### Regression
+
 ```bash 
 from auto_machinelearning.ml.regression import AutoRegression
 
@@ -128,4 +130,65 @@ print("r2_score : ", r2_score(y_pred, y))
 print("mse : ", mean_squared_error(y_pred, y))
 print("rmse : ", np.sqrt(mean_squared_error(y_pred, y)))
 
+```
+
+### Classification
+
+```bash 
+from auto_machinelearning.ml.classification import AutoClassification
+
+classification = AutoRegression(path="data.csv", filetype="csv", target_column="target_column")
+result = classification.train_model()
+print(result)
+
+```
+
+### Models available 
+
+- Logistic Regression
+- KNN 
+- Naive Bayes
+- Decision Tree
+- Random Forest
+- Gradiant Boosting
+- ADA Boost
+
+### result(parameters get in result)
+
+- best_model_name
+- model
+- model_params
+- accuracy
+- precision
+- recall
+- f1_score
+
+### how to store and use trained model
+
+```bash
+
+import joblib 
+import numpy as np
+import pandas as pd 
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+
+## Store trained model to local system
+model = result.get("model")
+joblib.dump(model, "model.pkl")
+
+## Load model
+model = joblib.load("model.pkl")
+
+## Import data and predict
+df = pd.read_csv("processed.csv")
+X = df.drop(columns=['target_column'])
+y = df["target_column"]
+
+y_pred = model.predict(X)
+
+## Evaluate model 
+print("accuracy score : ", accuracy_score(y_pred, y))
+print("precision score : ", precision_score(y_pred, y))
+print("recall score : ", recall_score(y_pred, y))
+print("f1 score : ", f1_score(y_pred, y))
 ```

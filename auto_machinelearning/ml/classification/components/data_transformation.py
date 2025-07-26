@@ -2,8 +2,8 @@ import os, sys
 import pandas as pd 
 import numpy as np 
 
-from auto_machinelearning.ml.regression.entity.artifacts_entity import DataIngestionArtifacts
-from auto_machinelearning.ml.regression.entity.artifacts_entity import DataTransformationArtifacts
+from auto_machinelearning.ml.classification.entity.artifacts_entity import DataIngestionArtifacts
+from auto_machinelearning.ml.classification.entity.artifacts_entity import DataTransformationArtifacts
 
 class DataTransformation: 
     def __init__(self, data_ingestion_artifacts: DataIngestionArtifacts, target_column: str): 

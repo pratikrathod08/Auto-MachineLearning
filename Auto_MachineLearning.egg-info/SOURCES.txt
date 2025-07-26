@@ -1,4 +1,3 @@
-README.md
 setup.py
 Auto_MachineLearning.egg-info/PKG-INFO
 Auto_MachineLearning.egg-info/SOURCES.txt

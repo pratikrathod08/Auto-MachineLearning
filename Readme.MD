@@ -3,7 +3,7 @@
 
 ## Test version
 View at:
-https://test.pypi.org/project/Auto-MachineLearning/0.0.7/
+https://test.pypi.org/project/Auto-MachineLearning/0.0.9/
 
 
 ## How to use 
@@ -12,7 +12,7 @@ https://test.pypi.org/project/Auto-MachineLearning/0.0.7/
 ### Install test package
 
 ```bash
-pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.0.7
+pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.0.9
 ```
 
 ### Read Data

@@ -20,9 +20,9 @@ setup(
     author='PratikRathod',
     author_email='pratikr1521998@gmail.com',
     description="An AutoML framework with classification, regression, etc.",
-    long_description=open("README.md").read(),
+    long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
-    packages=find_packages() ,
+    packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
         "Operating System :: OS Independent",

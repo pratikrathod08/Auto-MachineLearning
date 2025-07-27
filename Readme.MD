@@ -1,6 +1,6 @@
-# 🤖 Auto-MachineLearning
+# 🤖 ML-Genius
 
-**Auto-MachineLearning** is a lightweight Python library that automates key machine learning tasks including preprocessing, training, and evaluation — with just a few lines of code. It supports both regression and classification pipelines and enables users to quickly test multiple models, select the best one, and store reusable components.
+**ML-Genius** is a lightweight Python library that automates key machine learning tasks including preprocessing, training, and evaluation — with just a few lines of code. It supports both regression and classification pipelines and enables users to quickly test multiple models, select the best one, and store reusable components.
 
 ---
 

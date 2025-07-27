@@ -15,8 +15,8 @@ def get_requirements(file_path:str)->List[str]:
         return requirements
 
 setup(
-    name='Auto-MachineLearning',
-    version='0.1.1',
+    name='ML-Genius',
+    version='0.0.1',
     author='PratikRathod',
     author_email='pratikr1521998@gmail.com',
     description="An AutoML framework with classification, regression, etc.",

@@ -1,18 +1,25 @@
-# Auto-MachineLearning 
+# 🤖 Auto-MachineLearning
 
+**Auto-MachineLearning** is a lightweight Python library that automates key machine learning tasks including preprocessing, training, and evaluation — with just a few lines of code. It supports both regression and classification pipelines and enables users to quickly test multiple models, select the best one, and store reusable components.
 
-## Test version
-View at:
-https://test.pypi.org/project/Auto-MachineLearning/0.1.0/
+---
 
+## 🚀 Features
+
+- One-line data preprocessing with support for CSV/Excel
+- Automated model training and evaluation
+- Supports both regression and classification
+- Easily store and reuse trained models and preprocessors
+- Extensible for new models and components
+
+---
 
 ## How to use 
-
 
 ### Install test package
 
 ```bash
-pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.1.0
+pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.1.1
 ```
 
 ### Read Data
@@ -29,7 +36,7 @@ df = reader.read_csv("data.csv")
 ```bash
 from auto_machinelearning.ml.preprocessor.datadescriber import DataDescribe
 
-desc = DataDescribe(df_csv, target_column="price")
+desc = DataDescribe(df_csv, target_column="target_column")
 desc.summarize()  # Print summary
 summary_data = desc.get_summary_dict()
 ```
@@ -64,7 +71,7 @@ import pandas as pd
 import joblib 
 
 preprocessor = joblib.load("output/preprocessor.pkl")
-csv_path = "data/Bengaluru_House_Data.csv"
+csv_path = "data/data.csv"
 df = pd.read_csv(csv_path)
 preprocessed_df = preprocessor.transform(df)
 preprocessed_df = pd.DataFrame(preprocessed_df)
@@ -79,13 +86,13 @@ preprocessed_df = pd.DataFrame(preprocessed_df)
 ```bash 
 from auto_machinelearning.ml.regression import AutoRegression
 
-regression = AutoRegression(path="processed.csv", filetype="csv", target_column="price")
+regression = AutoRegression(path="processed.csv", filetype="csv", target_column="target_column")
 result = regression.train_model()
 print(result)
 
 ```
 
-### Models available 
+### Models Available 
 
 - Linear Regression
 - Ridge Regression 
@@ -93,7 +100,7 @@ print(result)
 - Random Forest
 - Gradiant Boosting
 
-### result(parameters get in result)
+### Output Parameters
 
 - best_model_name
 - model
@@ -102,7 +109,7 @@ print(result)
 - rmse
 - mse
 
-### how to store and use trained model
+### Save and Use Trained Model
 
 ```bash
 
@@ -137,13 +144,13 @@ print("rmse : ", np.sqrt(mean_squared_error(y_pred, y)))
 ```bash 
 from auto_machinelearning.ml.classification import AutoClassification
 
-classification = AutoClassification(path="data.csv", filetype="csv", target_column="target_column")
+classification = AutoClassification(path="processed.csv", filetype="csv", target_column="target_column")
 result = classification.train_model()
 print(result)
 
 ```
 
-### Models available 
+### Models Available 
 
 - Logistic Regression
 - KNN 
@@ -153,7 +160,7 @@ print(result)
 - Gradiant Boosting
 - ADA Boost
 
-### result(parameters get in result)
+### Output Parameters
 
 - best_model_name
 - model
@@ -163,7 +170,7 @@ print(result)
 - recall
 - f1_score
 
-### how to store and use trained model
+### Save and Use Trained Model
 
 ```bash
 
@@ -192,3 +199,31 @@ print("precision score : ", precision_score(y_pred, y))
 print("recall score : ", recall_score(y_pred, y))
 print("f1 score : ", f1_score(y_pred, y))
 ```
+
+
+## 🤝 Contributing
+
+**Contributions are welcome! If you'd like to improve the code, add features, or fix bugs, please follow the steps below:**
+
+1. Fork the repository.  
+2. Create a new branch: git checkout -b feature-name  
+3. Make your changes.  
+4. Test your changes.   
+5. Commit and push: git commit -m 'Add some feature' && git push origin feature-name  
+6. Create a Pull Request.  
+
+### Guidelines
+
+- Follow PEP8 coding style.
+- Write meaningful commit messages.
+- Add docstrings and comments where necessary.
+
+**If you add a new model or preprocessor, please update the documentation.**
+
+### Issues & Discussions
+- Use the GitHub Issues to report bugs or suggest features.
+- You can also start a discussion if you're unsure about a change.
+
+## 📄 License
+
+This project is licensed under the MIT License – see the LICENSE file for details.

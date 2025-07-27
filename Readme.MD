@@ -16,16 +16,16 @@
 
 ## How to use 
 
-### Install test package
+### Installation 
 
-```bash
-pip install --extra-index-url https://test.pypi.org/simple/ Auto-MachineLearning==0.1.1
-```
+Github : `https://github.com/pratikrathod08/ML-Genius`
+
+Pypi : `pip install ML-Genius==0.0.2`
 
 ### Read Data
 
 ```bash
-from auto_machinelearning.ml.preprocessor.datareader import ReadData
+from ml_genius.ml.preprocessor.datareader import ReadData
 
 reader = ReadData()
 df = reader.read_csv("data.csv")
@@ -34,7 +34,7 @@ df = reader.read_csv("data.csv")
 ### Describe Data
 
 ```bash
-from auto_machinelearning.ml.preprocessor.datadescriber import DataDescribe
+from ml_genius.ml.preprocessor.datadescriber import DataDescribe
 
 desc = DataDescribe(df_csv, target_column="target_column")
 desc.summarize()  # Print summary
@@ -44,7 +44,7 @@ summary_data = desc.get_summary_dict()
 ### Preprocess Data
 ```bash
 
-from auto_machinelearning.ml.preprocessor.preprocess import AutoPreprocess
+from ml_genius.ml.preprocessor.preprocess import AutoPreprocess
 
 # Create the processor instance
 processor = AutoPreprocess(
@@ -84,7 +84,7 @@ preprocessed_df = pd.DataFrame(preprocessed_df)
 ### Regression
 
 ```bash 
-from auto_machinelearning.ml.regression import AutoRegression
+from ml_genius.ml.regression import AutoRegression
 
 regression = AutoRegression(path="processed.csv", filetype="csv", target_column="target_column")
 result = regression.train_model()
@@ -142,7 +142,7 @@ print("rmse : ", np.sqrt(mean_squared_error(y_pred, y)))
 ### Classification
 
 ```bash 
-from auto_machinelearning.ml.classification import AutoClassification
+from ml_genius.ml.classification import AutoClassification
 
 classification = AutoClassification(path="processed.csv", filetype="csv", target_column="target_column")
 result = classification.train_model()

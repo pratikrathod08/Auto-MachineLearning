@@ -3,10 +3,10 @@ import joblib
 import numpy as np 
 import pandas as pd 
 
-from auto_machinelearning.ml.preprocessor.datareader import ReadData
-from auto_machinelearning.ml.preprocessor.datadescriber import DataDescribe
-from auto_machinelearning.ml.preprocessor.auto_preprocess import AutoPreprocessor
-from auto_machinelearning.ml.preprocessor.processor import Preprocess
+from ml_genius.ml.preprocessor.datareader import ReadData
+from ml_genius.ml.preprocessor.datadescriber import DataDescribe
+from ml_genius.ml.preprocessor.auto_preprocess import AutoPreprocessor
+from ml_genius.ml.preprocessor.processor import Preprocess
 
 
 class AutoPreprocess: 

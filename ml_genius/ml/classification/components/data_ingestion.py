@@ -4,8 +4,8 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 
-from auto_machinelearning.ml.preprocessor.datareader import ReadData
-from auto_machinelearning.ml.classification.entity.artifacts_entity import DataIngestionArtifacts
+from ml_genius.ml.preprocessor.datareader import ReadData
+from ml_genius.ml.classification.entity.artifacts_entity import DataIngestionArtifacts
 
 class DataIngestion: 
     def __init__(self, path: str, file_type: str, **params): 

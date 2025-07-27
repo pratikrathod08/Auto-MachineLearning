@@ -13,9 +13,7 @@ from sklearn.ensemble import GradientBoostingRegressor
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
 from sklearn.metrics import mean_squared_error, r2_score
 
-from auto_machinelearning.ml.regression.utils import load_model_params
-
-from auto_machinelearning.ml.regression.entity.artifacts_entity import RegressionMetrixArtifacts, ModelTrainerArtifact, DataTransformationArtifacts
+from ml_genius.ml.regression.entity.artifacts_entity import RegressionMetrixArtifacts, ModelTrainerArtifact, DataTransformationArtifacts
 
 
 class ModelTrainer: 

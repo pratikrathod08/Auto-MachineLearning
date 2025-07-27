@@ -14,6 +14,9 @@
 
 ---
 
+View at:
+https://pypi.org/project/ML-Genius/0.0.2/
+
 ## How to use 
 
 ### Installation 
